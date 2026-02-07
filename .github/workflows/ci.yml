@@ -1,0 +1,6 @@
+- name: Lint
+  run: flake8 src tests --count --show-source --statistics
+- name: Type check
+  run: mypy src --ignore-missing-imports
+- name: Format check
+  run: black --check src tests
